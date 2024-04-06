@@ -106,16 +106,16 @@ class Header: Reactor.Component {
         var title_conn;
         if (this.secure_connection && this.direct_connection) {
             icon_conn = svg_secure;
-            title_conn = translate("Direct and encrypted connection");
+            title_conn = translate("Direct and rustdesk encrypted connection");
         } else if (this.secure_connection && !this.direct_connection) {
             icon_conn = svg_secure_relay;
-            title_conn = translate("Relayed and encrypted connection");
+            title_conn = translate("Relayed and rustdesk encrypted connection");
         } else if (!this.secure_connection && this.direct_connection) {
             icon_conn = svg_insecure;
-            title_conn = translate("Direct and unencrypted connection");
+            title_conn = translate("Direct and netbird encrypted connection");
         } else {
             icon_conn = svg_insecure_relay;
-            title_conn = translate("Relayed and unencrypted connection");
+            title_conn = translate("Relayed and netbird encrypted connection");
         }
         var title = get_id();
         if (pi.hostname) title += "(" + pi.username + "@" + pi.hostname + ")";
